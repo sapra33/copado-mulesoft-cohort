@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="7b416c61-0c42-4447-8df5-71803523f133" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="copado-mule-projectFlow" doc:id="7e6b44b9-0ae5-4f4e-911a-2983f5c84949" >
+		<http:listener doc:name="Listener" doc:id="8ec69220-4426-4f30-a5e5-4229af5e3526" config-ref="HTTP_Listener_config" path="/welcome"/>
+		<set-payload value="#['Welcome to Copado Mulesoft Co-hort']" doc:name="Set Payload" doc:id="372e19ea-9398-4c1d-9dce-53ad27ef68cc" />
+	</flow>
+	<flow name="copado-mule-projectFlow1" doc:id="4a6e4bf2-bd76-44b6-8b46-9fd549fe6240" >
+		<http:listener doc:name="Listener" doc:id="b4b9dd9f-79b3-493b-b283-ad699bcebc8b" config-ref="HTTP_Listener_config" path="/welcomeToCopado"/>
+		<set-payload value="#['Welcome to Copado']" doc:name="Set Payload" doc:id="5da7ca5e-da5f-4c83-8647-fb916bbd1bd3" />
+	</flow>
+</mule>

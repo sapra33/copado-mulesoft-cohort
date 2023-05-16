@@ -17,34 +17,34 @@
 		<mule.maven.plugin.version>3.4.2</mule.maven.plugin.version>
 	</properties>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-clean-plugin</artifactId>
-				<version>3.2.0</version>
-			</plugin>
-			<plugin>
-				<groupId>org.mule.tools.maven</groupId>
-				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
-				<extensions>true</extensions>
-				<configuration>
-					<armDeployment>
-                        <uri>https://anypoint.mulesoft.com</uri>
-                          <muleVersion>${runtime_version}</muleVersion>
-                          <target>${target}</target>
-                          <targetType>${targetType}</targetType>
-                          <server>my.anypoint.credentials</server>
-                          <environment>${environment}</environment>
-                        <properties>
-                            <key>value</key>
-                        </properties>
-      				</armDeployment>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+		<build>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-clean-plugin</artifactId>
+					<version>3.0.0</version>
+				</plugin>
+				<plugin>
+					<groupId>org.mule.tools.maven</groupId>
+					<artifactId>mule-maven-plugin</artifactId>
+					<version>${mule.maven.plugin.version}</version>
+					<extensions>true</extensions>
+					<configuration>
+						<armDeployment>
+							<uri>https://anypoint.mulesoft.com</uri>
+							<muleVersion>${runtime_version}</muleVersion>
+							<target>${target}</target>
+							<targetType>${targetType}</targetType>
+							<server>my.anypoint.credentials</server>
+							<environment>${environment}</environment>
+							<properties>
+								<key>value</key>
+							</properties>
+						</armDeployment>
+					</configuration>
+				</plugin>
+			</plugins>
+		</build>
 
 	<dependencies>
 		<dependency>

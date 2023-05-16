@@ -9,49 +9,45 @@
     <packaging>mule-application</packaging>
     <name>mule-rest-api-sample</name>
 
-
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	<name>copado-mule-project</name>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <app.runtime>4.3.0</app.runtime>
         <mule.maven.plugin.version>3.4.2</mule.maven.plugin.version>
         <munit.version>2.3.0</munit.version>
     </properties>
 
-    <build>
-        <testResources>
-            <testResource>
-                <directory>src/test/munit</directory>
-                <filtering>true</filtering>
-            </testResource>
-        </testResources>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-clean-plugin</artifactId>
-                <version>3.0.0</version>
-            </plugin>
-            <plugin>
-                <groupId>org.mule.tools.maven</groupId>
-                <artifactId>mule-maven-plugin</artifactId>
-                <version>${mule.maven.plugin.version}</version>
-                <extensions>true</extensions>
-                <configuration>
-                     <armDeployment>
-                        <uri>https://anypoint.mulesoft.com</uri>
-                          <muleVersion>${runtime_version}</muleVersion>
-                          <target>${target}</target>
-                          <targetType>${targetType}</targetType>
-                          <server>my.anypoint.credentials</server>
-                          <environment>${environment}</environment>
-                        <properties>
-                            <key>value</key>
-                        </properties>
-   	             </armDeployment>
-                </configuration>
-            </plugin>
+		<build>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-clean-plugin</artifactId>
+					<version>3.0.0</version>
+				</plugin>
+				<plugin>
+					<groupId>org.mule.tools.maven</groupId>
+					<artifactId>mule-maven-plugin</artifactId>
+					<version>${mule.maven.plugin.version}</version>
+					<extensions>true</extensions>
+					<configuration>
+						<armDeployment>
+							<uri>https://anypoint.mulesoft.com</uri>
+							<muleVersion>${runtime_version}</muleVersion>
+							<target>${target}</target>
+							<targetType>${targetType}</targetType>
+							<server>my.anypoint.credentials</server>
+							<environment>${environment}</environment>
+							<properties>
+								<key>value</key>
+							</properties>
+						</armDeployment>
+					</configuration>
+				</plugin>
+			</plugins>
+		</build>
 
             <!-- Plugin for Generating Munit test reports  -->
             <plugin>

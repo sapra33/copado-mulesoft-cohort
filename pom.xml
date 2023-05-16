@@ -30,18 +30,19 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<cloudHubDeployment>
-						<uri>https://anypoint.mulesoft.com</uri>
-						<muleVersion>4.4.0</muleVersion>
-						<connectedAppClientId>2c69f7d1ffda4175b386daa9e13c9d7c</connectedAppClientId>
-						<connectedAppClientSecret>52Cc6ccD134a443ea07F323A30f471F3</connectedAppClientSecret>
-						<connectedAppGrantType>client_credentials</connectedAppGrantType>
-						<applicationName>copado-mule-project</applicationName>
-						<environment>Sandbox</environment>
-						<workers>1</workers>
-						<workerType>Micro</workerType>
-						<objectStoreV2>true</objectStoreV2>
-					</cloudHubDeployment>
+						<cloudHubDeployment>
+					        <uri>https://anypoint.mulesoft.com</uri>
+					        <muleVersion>${runtime_version}</muleVersion>
+					        <connectedAppClientId>${clientid}</connectedAppClientId>
+					        <connectedAppClientSecret>${clientsecret}</connectedAppClientSecret>
+					        <region>${region}</region> 
+					        <connectedAppGrantType>client_credentials</connectedAppGrantType>
+					        <applicationName>${appname}</applicationName>
+					        <environment>${environment}</environment>
+					        <workers>${workerCount}</workers>
+					        <workerType>${workerType}</workerType>
+					        <objectStoreV2>true</objectStoreV2>
+					    </cloudHubDeployment>
 					<classifier>mule-application</classifier>
 				</configuration>
 			</plugin>

@@ -67,6 +67,15 @@
 		</plugins>
 	</build>
 
+		<distributionManagement>
+	        <repository>
+	            <id>MuleRepository</id>
+	            <name>RTF Repository</name>
+	            <url>https://maven.anypoint.mulesoft.com/api/v1/organizations/686e7f1d-2f37-41c7-bc50-ad7636e7b936/maven</url>
+	            <layout>default</layout>
+	        </repository>
+	    </distributionManagement>
+    
 	<dependencies>
 		<dependency>
 			<groupId>org.mule.connectors</groupId>

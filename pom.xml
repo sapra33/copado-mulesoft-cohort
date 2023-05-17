@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>686e7f1d-2f37-41c7-bc50-ad7636e7b936</groupId>
+	<groupId>com.mycompany</groupId>
 	<artifactId>copado-mule-project</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
@@ -51,8 +51,8 @@
 	
 	<distributionManagement>
 		<repository>
-			<id>${aws_artifact_domain}-${aws_artifact_repo}</id>
-			<name>${aws_artifact_domain}-${aws_artifact_repo}</name>
+			<id>${artifact_domain}-${artifact_repo}</id>
+			<name>${artifact_domain}-${artifact_repo}</name>
 			<url>${artifact_url}</url>
 		</repository>
 	</distributionManagement>

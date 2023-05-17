@@ -30,52 +30,33 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<runtimeFabricDeployment>
-                        <uri>https://anypoint.mulesoft.com</uri>
-                        <muleVersion>4.3.0</muleVersion>
-                        <connectedAppClientId>${clientid}</connectedAppClientId>
-                        <connectedAppClientSecret>${clientsecret}</connectedAppClientSecret>
-                        <connectedAppGrantType>client_credentials</connectedAppGrantType>
-                        <businessGroupId>686e7f1d-2f37-41c7-bc50-ad7636e7b936</businessGroupId>
-                        <applicationName>${appname}</applicationName>
-                        <target>${target}</target>
-                        <environment>${environment}</environment>
-                        <provider>${provider}</provider>
-                        <replicas>${replicas}</replicas>
-                        <properties>
-                            <key>value</key>
-                        </properties>
-                        <deploymentSettings>
-                            <enforceDeployingReplicasAcrossNodes>false</enforceDeployingReplicasAcrossNodes>
-                            <updateStrategy>recreate</updateStrategy>
-                            <clustered>false</clustered>
-                            <forwardSslSession>false</forwardSslSession>
-                            <lastMileSecurity>false</lastMileSecurity>
-                            <resources>
-                                <cpu>
-                                    <reserved>20m</reserved>
-                                    <limit>1500m</limit>
-                                </cpu>
-                                <memory>
-                                    <reserved>700Mi</reserved>
-                                </memory>
-                            </resources>
-                        </deploymentSettings>
-                    </runtimeFabricDeployment>
+						<cloudHubDeployment>
+					        <uri>https://anypoint.mulesoft.com</uri>
+					        <muleVersion>${runtime_version}</muleVersion>
+					        <connectedAppClientId>${clientid}</connectedAppClientId>
+					        <connectedAppClientSecret>${clientsecret}</connectedAppClientSecret>
+					        <region>${region}</region> 
+					        <connectedAppGrantType>client_credentials</connectedAppGrantType>
+					        <applicationName>${appname}</applicationName>
+					        <environment>${environment}</environment>
+					        <workers>${workerCount}</workers>
+					        <workerType>${workerType}</workerType>
+					        <objectStoreV2>true</objectStoreV2>
+					    </cloudHubDeployment>
+					<classifier>mule-application</classifier>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
-
-		<distributionManagement>
-	        <repository>
-	            <id>MuleRepository</id>
-	            <name>RTF Repository</name>
-	            <url>https://maven.anypoint.mulesoft.com/api/v1/organizations/686e7f1d-2f37-41c7-bc50-ad7636e7b936/maven</url>
-	            <layout>default</layout>
-	        </repository>
-	    </distributionManagement>
-    
+	
+	<distributionManagement>
+		<repository>
+			<id>${aws_artifact_domain}-${aws_artifact_repo}</id>
+			<name>${aws_artifact_domain}-${aws_artifact_repo}</name>
+			<url>${artifact_url}</url>
+		</repository>
+	</distributionManagement>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.mule.connectors</groupId>

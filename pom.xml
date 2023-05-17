@@ -8,7 +8,7 @@
 	<packaging>mule-application</packaging>
 
 	<name>copado-mule-project</name>
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -30,17 +30,38 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<armDeployment>
-							<uri>https://anypoint.mulesoft.com</uri>
-							<muleVersion>${runtime_version}</muleVersion>
-							<target>${target}</target>
-							<targetType>${targetType}</targetType>
-							<server>my.anypoint.credentials</server>
-							<environment>${environment}</environment>
-							<properties>
-								<key>value</key>
-							</properties>
-						</armDeployment>
+					<runtimeFabricDeployment>
+                        <uri>https://anypoint.mulesoft.com</uri>
+                        <muleVersion>4.3.0</muleVersion>
+                        <connectedAppClientId>${clientid}</connectedAppClientId>
+                        <connectedAppClientSecret>${clientsecret}</connectedAppClientSecret>
+                        <connectedAppGrantType>client_credentials</connectedAppGrantType>
+                        <businessGroupId>686e7f1d-2f37-41c7-bc50-ad7636e7b936</businessGroupId>
+                        <applicationName>${appname}</applicationName>
+                        <target>${target}</target>
+                        <environment>${environment}</environment>
+                        <provider>${provider}</provider>
+                        <replicas>${replicas}</replicas>
+                        <properties>
+                            <key>value</key>
+                        </properties>
+                        <deploymentSettings>
+                            <enforceDeployingReplicasAcrossNodes>false</enforceDeployingReplicasAcrossNodes>
+                            <updateStrategy>recreate</updateStrategy>
+                            <clustered>false</clustered>
+                            <forwardSslSession>false</forwardSslSession>
+                            <lastMileSecurity>false</lastMileSecurity>
+                            <resources>
+                                <cpu>
+                                    <reserved>20m</reserved>
+                                    <limit>1500m</limit>
+                                </cpu>
+                                <memory>
+                                    <reserved>700Mi</reserved>
+                                </memory>
+                            </resources>
+                        </deploymentSettings>
+                    </runtimeFabricDeployment>
 				</configuration>
 			</plugin>
 		</plugins>

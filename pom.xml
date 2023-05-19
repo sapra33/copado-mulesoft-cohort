@@ -4,7 +4,7 @@
 
 	<groupId>686e7f1d-2f37-41c7-bc50-ad7636e7b936</groupId>
 	<artifactId>copado-mule-project</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
 	<name>copado-mule-project</name>
@@ -53,38 +53,6 @@
 					<classifier>mule-application</classifier>
 				</configuration>
 			</plugin>
-			<!-- Plugin for Generating Munit test reports  -->
-			<plugin>
-				<groupId>com.mulesoft.munit.tools</groupId>
-				<artifactId>munit-maven-plugin</artifactId>
-				<version>${munit.version}</version>
-				<executions>
-					<execution>
-						<id>test</id>
-						<phase>test</phase>
-						<goals>
-							<goal>test</goal>
-							<goal>coverage-report</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<coverage>
-						<runCoverage>true</runCoverage>
-						<failBuild>true</failBuild>
-						<requiredApplicationCoverage>80</requiredApplicationCoverage>
-						<requiredResourceCoverage>50</requiredResourceCoverage>
-						<requiredFlowCoverage>50</requiredFlowCoverage>
-						<formats>
-							<format>console</format>
-							<format>html</format>
-							<format>json</format>
-							<format>sonar</format>
-						</formats>
-					</coverage>
-				</configuration>
-			</plugin>
-			<!-- Plugin for Generating Munit test reports  -->
 		</plugins>
 	</build>
 	

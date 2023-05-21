@@ -75,6 +75,7 @@
 		<repository>
 			<id>mulesoft-releases</id>
 			<name>MuleSoft Releases Repository</name>
+			<!--suppress UnresolvedMavenProperty -->
 			<url>https://repository.mulesoft.org/releases/</url>
 			<layout>default</layout>
 		</repository>
@@ -85,6 +86,7 @@
 			<id>mulesoft-releases</id>
 			<name>MuleSoft Releases Repository</name>
 			<layout>default</layout>
+			<!--suppress UnresolvedMavenProperty -->
 			<url>https://repository.mulesoft.org/releases/</url>
 			<snapshots>
 				<enabled>false</enabled>

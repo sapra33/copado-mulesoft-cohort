@@ -66,17 +66,15 @@
 
 	<repositories>
 		  <repository>
-            <id>anypoint-exchange-v2</id>
+            <id>anypoint-exchange-v3</id>
             <name>Anypoint Exchange</name>
-             <!--suppress UnresolvedMavenProperty -->
             <url>https://maven.anypoint.mulesoft.com/api/v2/maven</url>
             <!--suppress UnresolvedMavenProperty -->
             <layout>default</layout>
         </repository>
         <repository>
-            <id>mulesoft-releases</id>
+            <id>mulesoft-releases-v2</id>
             <name>MuleSoft Releases Repository</name>
-             <!--suppress UnresolvedMavenProperty -->
             <url>https://repository.mulesoft.org/releases/</url>
             <!--suppress UnresolvedMavenProperty -->
             <layout>default</layout>

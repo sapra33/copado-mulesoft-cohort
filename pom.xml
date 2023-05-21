@@ -8,7 +8,6 @@
 	<packaging>mule-application</packaging>
 
 	<name>copado-mule-project</name>
-
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -34,10 +33,10 @@
 					<armDeployment>
 							<uri>https://anypoint.mulesoft.com</uri>
 							<muleVersion>${runtime_version}</muleVersion>
-							<target>${targets}</target>
+							<target>${targetsssss}</target>
 							<targetType>${targetType}</targetType>
 							<server>my.anypoint.credentials</server>
-							<environment>${environments}</environment>
+							<environment>${environmentssssss}</environment>
 							<properties>
 								<key>value</key>
 							</properties>

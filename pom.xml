@@ -34,7 +34,7 @@
 					<armDeployment>
 							<uri>https://anypoint.mulesoft.com</uri>
 							<muleVersion>${runtime_version}</muleVersion>
-							<target>${targets}</target>
+							<target>${target}</target>
 							<targetType>${targetType}</targetType>
 							<server>my.anypoint.credentials</server>
 							<environment>${environment}</environment>
@@ -66,14 +66,12 @@
 		<repository>
 			<id>anypoint-exchange-v3</id>
 			<name>Anypoint Exchange</name>
-			<!--suppress UnresolvedMavenProperty -->
 			<url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
 			<layout>default</layout>
 		</repository>
 		<repository>
 			<id>mulesoft-releases</id>
 			<name>MuleSoft Releases Repository</name>
-			<!--suppress UnresolvedMavenProperty -->
 			<url>https://repository.mulesoft.org/releases/</url>
 			<layout>default</layout>
 		</repository>

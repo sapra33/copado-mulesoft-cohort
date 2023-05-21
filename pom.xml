@@ -9,6 +9,7 @@
 
 	<name>copado-mule-project</name>
 
+
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -31,21 +32,27 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<armDeployment>
-							<uri>https://anypoint.mulesoft.com</uri>
-							<muleVersion>${runtime_version}</muleVersion>
-							<target>${target}</target>
-							<targetType>${targetType}</targetType>
-							<server>my.anypoint.credentials</server>
-							<environment>${environment}</environment>
-							<properties>
-								<key>value</key>
-							</properties>
-						</armDeployment>
+					<configuration>
+						<cloudHubDeployment>
+					        <uri>https://anypoint.mulesoft.com</uri>
+					        <muleVersion>${runtime_version}</muleVersion>
+					        <connectedAppClientId>${clientid}</connectedAppClientId>
+					        <connectedAppClientSecret>${clientsecret}</connectedAppClientSecret>
+					        <region>${region}</region> 
+					        <connectedAppGrantType>client_credentials</connectedAppGrantType>
+					        <applicationName>${appname}</applicationName>
+					        <environment>${environment}</environment>
+					        <workers>${workerCount}</workers>
+					        <workerType>${workerType}</workerType>
+					        <objectStoreV2>true</objectStoreV2>
+					    </cloudHubDeployment>
+					<classifier>mule-application</classifier>
+				</configuration>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+
 
 	<dependencies>
 		<dependency>
@@ -64,14 +71,16 @@
 
 	<repositories>
 		<repository>
-			<id>anypoint-exchange-v3</id>
+			<id>anypoint</id>
 			<name>Anypoint Exchange</name>
+			<!--suppress UnresolvedMavenProperty -->
 			<url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
 			<layout>default</layout>
 		</repository>
 		<repository>
-			<id>mulesoft-releases</id>
+			<id>mulesoft</id>
 			<name>MuleSoft Releases Repository</name>
+			<!--suppress UnresolvedMavenProperty -->
 			<url>https://repository.mulesoft.org/releases/</url>
 			<layout>default</layout>
 		</repository>
@@ -82,6 +91,7 @@
 			<id>mulesoft-releases</id>
 			<name>MuleSoft Releases Repository</name>
 			<layout>default</layout>
+			<!--suppress UnresolvedMavenProperty -->
 			<url>https://repository.mulesoft.org/releases/</url>
 			<snapshots>
 				<enabled>false</enabled>

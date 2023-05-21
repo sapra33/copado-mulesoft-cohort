@@ -33,10 +33,10 @@
 					<armDeployment>
 							<uri>https://anypoint.mulesoft.com</uri>
 							<muleVersion>${runtime_version}</muleVersion>
-							<target>${targetsssss}</target>
+							<target>${target}</target>
 							<targetType>${targetType}</targetType>
 							<server>my.anypoint.credentials</server>
-							<environment>${environmentssssss}</environment>
+							<environment>${environment}</environment>
 							<properties>
 								<key>value</key>
 							</properties>

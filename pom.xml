@@ -8,7 +8,6 @@
 	<packaging>mule-application</packaging>
 
 	<name>copado-mule-project</name>
-
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -31,17 +30,20 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<armDeployment>
-							<uri>https://anypoint.mulesoft.com</uri>
-							<muleVersion>${runtime_version}</muleVersion>
-							<target>${targets}</target>
-							<targetType>${targetType}</targetType>
-							<server>my.anypoint.credentials</server>
-							<environment>${environments}</environment>
-							<properties>
-								<key>value</key>
-							</properties>
-						</armDeployment>
+						<cloudHubDeployment>
+					        <uri>https://anypoint.mulesoft.com</uri>
+					        <muleVersion>${runtime_version}</muleVersion>
+					        <connectedAppClientId>${clientid}</connectedAppClientId>
+					        <connectedAppClientSecret>${clientsecret}</connectedAppClientSecret>
+					        <region>${region}</region> 
+					        <connectedAppGrantType>client_credentials</connectedAppGrantType>
+					        <applicationName>${appname}</applicationName>
+					        <environment>${environment}</environment>
+					        <workers>${workerCount}</workers>
+					        <workerType>${workerType}</workerType>
+					        <objectStoreV2>true</objectStoreV2>
+					    </cloudHubDeployment>
+					<classifier>mule-application</classifier>
 				</configuration>
 			</plugin>
 		</plugins>

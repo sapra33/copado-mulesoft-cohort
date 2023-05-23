@@ -1,0 +1,64 @@
+INFO  2023-05-18 12:02:11,568 [main] [processor: ; event: ] org.mule.munit.remote.RemoteRunner: Run Started
+INFO  2023-05-18 12:04:22,706 [main] [processor: ; event: ] org.mule.munit.remote.RemoteRunner: Done
+INFO  2023-05-18 12:06:08,730 [main] [processor: ; event: ] org.mule.munit.remote.RemoteRunner: Run Started
+INFO  2023-05-18 12:06:08,764 [main] [processor: ; event: ] org.mule.munit.remote.notifiers.SocketNotifier: Connected to localhost on port 53151
+INFO  2023-05-18 12:06:08,966 [main] [processor: ; event: ] org.mule.munit.remote.coverage.CoverageManager: Starting coverage server
+INFO  2023-05-18 12:06:08,968 [pool-2-thread-1] [processor: ; event: ] org.mule.munit.plugins.coverage.server.CoverageServer: Coverage Server starting...
+INFO  2023-05-18 12:06:08,969 [pool-2-thread-1] [processor: ; event: ] org.mule.munit.plugins.coverage.server.CoverageServer: Waiting for coverage client connection in port [50273]...
+INFO  2023-05-18 12:06:41,373 [pool-2-thread-1] [processor: ; event: ] org.mule.munit.plugins.coverage.server.CoverageServer: Coverage client connection received from localhost - true
+INFO  2023-05-18 12:06:41,392 [pool-2-thread-1] [processor: ; event: ] org.mule.munit.plugins.coverage.server.CoverageServer: Coverage client connection received from localhost - true
+INFO  2023-05-18 12:06:41,424 [pool-5-thread-1] [processor: ; event: ] org.mule.munit.remote.coverage.CoverageManager: accumulating covered locations
+INFO  2023-05-18 12:06:41,427 [pool-6-thread-1] [processor: ; event: ] org.mule.munit.remote.coverage.CoverageManager: accumulating covered locations
+INFO  2023-05-18 12:06:43,892 [main] [processor: ; event: ] org.mule.munit.remote.coverage.CoverageManager: Shutting down coverage server
+INFO  2023-05-18 12:06:43,893 [main] [processor: ; event: ] org.mule.munit.remote.coverage.CoverageManager: Calculating application coverage
+INFO  2023-05-18 12:06:43,925 [main] [processor: ; event: ] org.mule.munit.remote.RemoteRunner: Done
+INFO  2023-05-18 12:10:28,556 [main] [processor: ; event: ] org.mule.munit.remote.RemoteRunner: Run Started
+INFO  2023-05-18 12:10:28,631 [main] [processor: ; event: ] org.mule.munit.remote.notifiers.SocketNotifier: Connected to localhost on port 53283
+INFO  2023-05-18 12:10:28,907 [main] [processor: ; event: ] org.mule.munit.remote.coverage.CoverageManager: Starting coverage server
+INFO  2023-05-18 12:10:28,912 [pool-2-thread-1] [processor: ; event: ] org.mule.munit.plugins.coverage.server.CoverageServer: Coverage Server starting...
+INFO  2023-05-18 12:10:28,918 [pool-2-thread-1] [processor: ; event: ] org.mule.munit.plugins.coverage.server.CoverageServer: Waiting for coverage client connection in port [50154]...
+INFO  2023-05-18 12:10:58,723 [pool-2-thread-1] [processor: ; event: ] org.mule.munit.plugins.coverage.server.CoverageServer: Coverage client connection received from localhost - true
+INFO  2023-05-18 12:10:58,729 [pool-2-thread-1] [processor: ; event: ] org.mule.munit.plugins.coverage.server.CoverageServer: Coverage client connection received from localhost - true
+INFO  2023-05-18 12:10:58,767 [pool-5-thread-1] [processor: ; event: ] org.mule.munit.remote.coverage.CoverageManager: accumulating covered locations
+INFO  2023-05-18 12:10:58,768 [pool-6-thread-1] [processor: ; event: ] org.mule.munit.remote.coverage.CoverageManager: accumulating covered locations
+INFO  2023-05-18 12:11:00,855 [main] [processor: ; event: ] org.mule.munit.remote.coverage.CoverageManager: Shutting down coverage server
+INFO  2023-05-18 12:11:00,857 [main] [processor: ; event: ] org.mule.munit.remote.coverage.CoverageManager: Calculating application coverage
+INFO  2023-05-18 12:11:00,884 [main] [processor: ; event: ] org.mule.munit.remote.RemoteRunner: Done
+INFO  2023-05-18 12:15:59,337 [main] [processor: ; event: ] org.mule.munit.remote.RemoteRunner: Run Started
+INFO  2023-05-18 12:15:59,380 [main] [processor: ; event: ] org.mule.munit.remote.notifiers.SocketNotifier: Connected to localhost on port 53347
+INFO  2023-05-18 12:15:59,705 [main] [processor: ; event: ] org.mule.munit.remote.coverage.CoverageManager: Starting coverage server
+INFO  2023-05-18 12:15:59,709 [pool-2-thread-1] [processor: ; event: ] org.mule.munit.plugins.coverage.server.CoverageServer: Coverage Server starting...
+INFO  2023-05-18 12:15:59,710 [pool-2-thread-1] [processor: ; event: ] org.mule.munit.plugins.coverage.server.CoverageServer: Waiting for coverage client connection in port [50001]...
+INFO  2023-05-18 12:16:26,798 [pool-2-thread-1] [processor: ; event: ] org.mule.munit.plugins.coverage.server.CoverageServer: Coverage client connection received from localhost - true
+INFO  2023-05-18 12:16:26,804 [pool-2-thread-1] [processor: ; event: ] org.mule.munit.plugins.coverage.server.CoverageServer: Coverage client connection received from localhost - true
+INFO  2023-05-18 12:16:26,842 [pool-6-thread-1] [processor: ; event: ] org.mule.munit.remote.coverage.CoverageManager: accumulating covered locations
+INFO  2023-05-18 12:16:26,842 [pool-5-thread-1] [processor: ; event: ] org.mule.munit.remote.coverage.CoverageManager: accumulating covered locations
+INFO  2023-05-18 12:16:29,143 [main] [processor: ; event: ] org.mule.munit.remote.coverage.CoverageManager: Shutting down coverage server
+INFO  2023-05-18 12:16:29,148 [main] [processor: ; event: ] org.mule.munit.remote.coverage.CoverageManager: Calculating application coverage
+INFO  2023-05-18 12:16:29,185 [main] [processor: ; event: ] org.mule.munit.remote.RemoteRunner: Done
+INFO  2023-05-18 12:17:40,991 [main] [processor: ; event: ] org.mule.munit.remote.RemoteRunner: Run Started
+INFO  2023-05-18 12:17:41,053 [main] [processor: ; event: ] org.mule.munit.remote.notifiers.SocketNotifier: Connected to localhost on port 53381
+INFO  2023-05-18 12:17:41,373 [main] [processor: ; event: ] org.mule.munit.remote.coverage.CoverageManager: Starting coverage server
+INFO  2023-05-18 12:17:41,378 [pool-2-thread-1] [processor: ; event: ] org.mule.munit.plugins.coverage.server.CoverageServer: Coverage Server starting...
+INFO  2023-05-18 12:17:41,379 [pool-2-thread-1] [processor: ; event: ] org.mule.munit.plugins.coverage.server.CoverageServer: Waiting for coverage client connection in port [50135]...
+INFO  2023-05-18 12:18:08,559 [pool-2-thread-1] [processor: ; event: ] org.mule.munit.plugins.coverage.server.CoverageServer: Coverage client connection received from localhost - true
+INFO  2023-05-18 12:18:08,565 [pool-2-thread-1] [processor: ; event: ] org.mule.munit.plugins.coverage.server.CoverageServer: Coverage client connection received from localhost - true
+INFO  2023-05-18 12:18:08,591 [pool-6-thread-1] [processor: ; event: ] org.mule.munit.remote.coverage.CoverageManager: accumulating covered locations
+INFO  2023-05-18 12:18:08,592 [pool-5-thread-1] [processor: ; event: ] org.mule.munit.remote.coverage.CoverageManager: accumulating covered locations
+INFO  2023-05-18 12:18:10,598 [main] [processor: ; event: ] org.mule.munit.remote.coverage.CoverageManager: Shutting down coverage server
+INFO  2023-05-18 12:18:10,603 [main] [processor: ; event: ] org.mule.munit.remote.coverage.CoverageManager: Calculating application coverage
+INFO  2023-05-18 12:18:10,635 [main] [processor: ; event: ] org.mule.munit.remote.RemoteRunner: Done
+INFO  2023-05-18 12:28:11,591 [main] [processor: ; event: ] org.mule.munit.remote.RemoteRunner: Run Started
+INFO  2023-05-18 12:28:12,234 [main] [processor: ; event: ] org.mule.munit.remote.coverage.CoverageManager: Starting coverage server
+INFO  2023-05-18 12:28:12,236 [pool-2-thread-1] [processor: ; event: ] org.mule.munit.plugins.coverage.server.CoverageServer: Coverage Server starting...
+INFO  2023-05-18 12:28:12,236 [pool-2-thread-1] [processor: ; event: ] org.mule.munit.plugins.coverage.server.CoverageServer: Waiting for coverage client connection in port [50438]...
+INFO  2023-05-18 12:28:17,167 [main] [processor: ; event: ] org.mule.munit.remote.coverage.CoverageManager: Shutting down coverage server
+INFO  2023-05-18 12:28:17,170 [main] [processor: ; event: ] org.mule.munit.remote.coverage.CoverageManager: Calculating application coverage
+INFO  2023-05-18 12:28:17,207 [main] [processor: ; event: ] org.mule.munit.remote.RemoteRunner: Done
+INFO  2023-05-18 12:30:01,840 [main] [processor: ; event: ] org.mule.munit.remote.RemoteRunner: Run Started
+INFO  2023-05-18 12:30:02,672 [main] [processor: ; event: ] org.mule.munit.remote.coverage.CoverageManager: Starting coverage server
+INFO  2023-05-18 12:30:02,673 [pool-2-thread-1] [processor: ; event: ] org.mule.munit.plugins.coverage.server.CoverageServer: Coverage Server starting...
+INFO  2023-05-18 12:30:02,674 [pool-2-thread-1] [processor: ; event: ] org.mule.munit.plugins.coverage.server.CoverageServer: Waiting for coverage client connection in port [50276]...
+INFO  2023-05-18 12:30:07,188 [main] [processor: ; event: ] org.mule.munit.remote.coverage.CoverageManager: Shutting down coverage server
+INFO  2023-05-18 12:30:07,190 [main] [processor: ; event: ] org.mule.munit.remote.coverage.CoverageManager: Calculating application coverage
+INFO  2023-05-18 12:30:07,208 [main] [processor: ; event: ] org.mule.munit.remote.RemoteRunner: Done

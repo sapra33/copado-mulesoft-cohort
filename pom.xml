@@ -8,16 +8,23 @@
 	<packaging>mule-application</packaging>
 
 	<name>copado-mule-project</name>
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<app.runtime>4.4.0</app.runtime>
 		<mule.maven.plugin.version>3.4.2</mule.maven.plugin.version>
+		<munit.version>2.3.13</munit.version>
 	</properties>
 
 	<build>
+		<testResources>
+			<testResource>
+				<directory>src/test/munit</directory>
+				<filtering>true</filtering>
+			</testResource>
+		</testResources>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -30,36 +37,63 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-						<cloudHubDeployment>
-					        <uri>https://anypoint.mulesoft.com</uri>
-					        <muleVersion>${runtime_version}</muleVersion>
-					        <connectedAppClientId>${clientid}</connectedAppClientId>
-					        <connectedAppClientSecret>${clientsecret}</connectedAppClientSecret>
-					        <region>${region}</region> 
-					        <connectedAppGrantType>client_credentials</connectedAppGrantType>
-					        <applicationName>${appname}</applicationName>
-					        <environment>${environment}</environment>
-					        <workers>${workerCount}</workers>
-					        <workerType>${workerType}</workerType>
-					        <objectStoreV2>true</objectStoreV2>
-					    </cloudHubDeployment>
+					<cloudHubDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<muleVersion>${runtime_version}</muleVersion>
+						<connectedAppClientId>${clientid}</connectedAppClientId>
+						<connectedAppClientSecret>${clientsecret}</connectedAppClientSecret>
+						<region>${region}</region>
+						<connectedAppGrantType>client_credentials</connectedAppGrantType>
+						<applicationName>${appname}</applicationName>
+						<environment>${environment}</environment>
+						<workers>${workerCount}</workers>
+						<workerType>${workerType}</workerType>
+						<objectStoreV2>true</objectStoreV2>
+					</cloudHubDeployment>
 					<classifier>mule-application</classifier>
 				</configuration>
 			</plugin>
+			<!-- Plugin for Generating Munit test reports  -->
+			<plugin>
+				<groupId>com.mulesoft.munit.tools</groupId>
+				<artifactId>munit-maven-plugin</artifactId>
+				<version>${munit.version}</version>
+				<executions>
+					<execution>
+						<id>test</id>
+						<phase>test</phase>
+						<goals>
+							<goal>test</goal>
+							<goal>coverage-report</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<coverage>
+						<runCoverage>true</runCoverage>
+						<failBuild>true</failBuild>
+						<requiredApplicationCoverage>80</requiredApplicationCoverage>
+						<requiredResourceCoverage>50</requiredResourceCoverage>
+						<requiredFlowCoverage>50</requiredFlowCoverage>
+						<formats>
+							<format>console</format>
+							<format>html</format>
+							<format>json</format>
+							<format>sonar</format>
+						</formats>
+					</coverage>
+				</configuration>
+			</plugin>
+			<!-- Plugin for Generating Munit test reports  -->
 		</plugins>
 	</build>
-	
-		 <distributionManagement>
-		        <snapshotRepository>
-		            <id>${artifact_domain}-${artifact_repo}</id>
-		            <name>${artifact_domain}-${artifact_repo}</name>
-		            <!--suppress UnresolvedMavenProperty -->
-		            <url>${artifact_url}</url>
-		        </snapshotRepository>
-		    </distributionManagement>
-		
-	
-
+	<distributionManagement>
+		<repository>
+			<id>${artifact_domain}-${artifact_repo}</id>
+			<name>${artifact_domain}-${artifact_repo}</name>
+			<url>${artifact_url}</url>
+		</repository>
+	</distributionManagement>
 	<dependencies>
 		<dependency>
 			<groupId>org.mule.connectors</groupId>
@@ -73,15 +107,29 @@
 			<version>1.2.2</version>
 			<classifier>mule-plugin</classifier>
 		</dependency>
+		<dependency>
+			<groupId>com.mulesoft.munit</groupId>
+			<artifactId>munit-runner</artifactId>
+			<version>${munit.version}</version>
+			<classifier>mule-plugin</classifier>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.mulesoft.munit</groupId>
+			<artifactId>munit-tools</artifactId>
+			<version>${munit.version}</version>
+			<classifier>mule-plugin</classifier>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mule.weave</groupId>
+			<artifactId>assertions</artifactId>
+			<version>1.0.2</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<repositories>
-		<repository>
-		    <id>${artifact_domain}-${artifact_repo}</id>
-		    <name>${artifact_domain}-${artifact_repo}</name>
-		   <!--suppress UnresolvedMavenProperty -->
-		    <url>${artifact_url}</url>
-		        </repository>
 		<repository>
 			<id>anypoint-exchange-v3</id>
 			<name>Anypoint Exchange</name>

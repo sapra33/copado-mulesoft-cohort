@@ -1,3 +1,5 @@
 {
-  "minMuleVersion": "4.4.0"
+  "minMuleVersion": "4.4.0",
+  "runtimeProduct": "MULE_EE",
+  "requiredProduct": "MULE_EE"
 }

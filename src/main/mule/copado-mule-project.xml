@@ -5,7 +5,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
 	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="7b416c61-0c42-4447-8df5-71803523f133" >
-		<http:listener-connection host="0.0.0.0" port="8081" />
+		<http:listener-connection host="0.0.0.0" port="8082" />
 	</http:listener-config>
 	<flow name="copado-mule-projectFlow" doc:id="7e6b44b9-0ae5-4f4e-911a-2983f5c84949" >
 		<http:listener doc:name="Listener" doc:id="8ec69220-4426-4f30-a5e5-4229af5e3526" config-ref="HTTP_Listener_config" path="/welcome"/>

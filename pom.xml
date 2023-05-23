@@ -48,6 +48,17 @@
 			</plugin>
 		</plugins>
 	</build>
+	
+		 <distributionManagement>
+		        <snapshotRepository>
+		            <id>${artifact_domain}-${artifact_repo}</id>
+		            <name>${artifact_domain}-${artifact_repo}</name>
+		            <!--suppress UnresolvedMavenProperty -->
+		            <url>${artifact_url}</url>
+		        </snapshotRepository>
+		    </distributionManagement>
+		
+	
 
 	<dependencies>
 		<dependency>
@@ -65,6 +76,12 @@
 	</dependencies>
 
 	<repositories>
+		<repository>
+		    <id>${artifact_domain}-${artifact_repo}</id>
+		    <name>${artifact_domain}-${artifact_repo}</name>
+		   <!--suppress UnresolvedMavenProperty -->
+		    <url>${artifact_url}</url>
+		        </repository>
 		<repository>
 			<id>anypoint-exchange-v3</id>
 			<name>Anypoint Exchange</name>

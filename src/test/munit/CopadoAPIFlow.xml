@@ -8,20 +8,20 @@
 		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
 		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
 	<munit:config name="CopadoAPIFlow.xml" />
-	<munit:test name="CopadoAPIFlow-copado-mule-projectFlowTest" doc:id="56670c98-12ec-441a-bb9f-a623673a039c" description="Test">
+	<munit:test name="CopadoAPIFlow-copado-mule-projectFlowTest" doc:id="9ce1dd53-2bb0-412b-b217-6257dc489281" description="Test">
 		<munit:execution >
-			<flow-ref doc:name="Flow-ref to copado-mule-projectFlow" doc:id="2d3f9ea1-e84b-451c-a124-e4ec2dcff208" name="copado-mule-projectFlow"/>
+			<flow-ref doc:name="Flow-ref to copado-mule-projectFlow" doc:id="f7980537-8080-4682-b150-748a4a28d64f" name="copado-mule-projectFlow"/>
 		</munit:execution>
 		<munit:validation >
-			<munit-tools:assert-that doc:name="Assert that" doc:id="010b5fc8-dec5-4f45-98a9-0643b79377ba" is='#[MunitTools::equalTo("Welcome to Copado Mulesoft Co-hort")]' expression="#[payload]"/>
+			<munit-tools:assert-that doc:name="Assert that" doc:id="e3463dd0-18fe-4b41-aec7-3c659b66e0e9" is='#[MunitTools::equalTo("Welcome to Copado Mulesoft Co-hort")]' expression="#[payload]"/>
 		</munit:validation>
 	</munit:test>
-	<munit:test name="CopadoAPIFlow-copado-mule-projectFlow1Test" doc:id="7f750025-25ab-4736-862c-00073189a567" description="Test">
+	<munit:test name="CopadoAPIFlow-copado-mule-projectFlow1Test" doc:id="6a9ba351-ce47-4b27-b97d-9469e5990ea0" description="Test">
 		<munit:execution >
-			<flow-ref doc:name="Flow-ref to copado-mule-projectFlow1" doc:id="27efab76-e441-49db-84d1-31bc45478252" name="copado-mule-projectFlow1"/>
+			<flow-ref doc:name="Flow-ref to copado-mule-projectFlow1" doc:id="042c1edd-7347-485b-b173-a6ef28c6bef2" name="copado-mule-projectFlow1"/>
 		</munit:execution>
 		<munit:validation >
-			<munit-tools:assert-that doc:name="Assert that" doc:id="1499fcbf-329c-4180-9022-9564ab946e4b" is='#[MunitTools::equalTo("Welcome to Copado")]' expression="#[payload]"/>
+			<munit-tools:assert-that doc:name="Assert that" doc:id="1137dce2-3076-4189-93c7-66f6a77a64d8" is='#[MunitTools::equalTo("Welcome to Copado")]' expression="#[payload]"/>
 		</munit:validation>
 	</munit:test>
 

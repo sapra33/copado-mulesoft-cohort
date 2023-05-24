@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="CopadoAPIFlow.xml" />
+	<munit:test name="CopadoAPIFlow-copado-mule-projectFlowTest" doc:id="9ce1dd53-2bb0-412b-b217-6257dc489281" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to copado-mule-projectFlow" doc:id="f7980537-8080-4682-b150-748a4a28d64f" name="copado-mule-projectFlow"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="e3463dd0-18fe-4b41-aec7-3c659b66e0e9" is='#[MunitTools::equalTo("Welcome to Copado Mulesoft Co-hort")]' expression="#[payload]"/>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="CopadoAPIFlow-copado-mule-projectFlow1Test" doc:id="6a9ba351-ce47-4b27-b97d-9469e5990ea0" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to copado-mule-projectFlow1" doc:id="042c1edd-7347-485b-b173-a6ef28c6bef2" name="copado-mule-projectFlow1"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="1137dce2-3076-4189-93c7-66f6a77a64d8" is='#[MunitTools::equalTo("Welcome to Copado")]' expression="#[payload]"/>
+		</munit:validation>
+	</munit:test>
+
+</mule>
